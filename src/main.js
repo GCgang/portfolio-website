@@ -8,3 +8,10 @@ window.addEventListener('scroll', () => {
         header.classList.remove('header--dark');
     }
 });
+
+// 페이지 아래로 스크롤 시 홈에 스타일링 적용
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+window.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+})
