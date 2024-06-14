@@ -25,3 +25,15 @@ window.addEventListener('scroll', () => {
         arrowUp.style.opacity = 0;
     }
 })
+
+// Navbar 토글 버튼 클릭 처리
+const navbarToggle = document.querySelector('.header__toggle');
+navbarToggle.addEventListener('click', () => {
+    console.log(navbarMenu.classList.toggle('open'));
+}) 
+
+// Navbar 메뉴 클릭시 메뉴 자동으로 닫기
+const navbarMenu = document.querySelector('.header__menu');
+navbarMenu.addEventListener('click', () => {
+    navbarMenu.classList.remove('open');
+})
